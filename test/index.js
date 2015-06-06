@@ -6,7 +6,7 @@ var increment = require('increment-buffer')
 var split = require('pull-randomly-split')
 var boxes = require('../')
 
-var sodium = require('sodium').api
+var sodium = require('sodium').api || require('sodium')
 
 var box = sodium.crypto_secretbox
 var unbox = sodium.crypto_secretbox_open
